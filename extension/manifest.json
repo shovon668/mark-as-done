@@ -1,0 +1,20 @@
+{
+  "name": "BLC Mark as done",
+  "version": "0.1",
+  "manifest_version" : 2,
+  "description": "Mark all activities as Done in BLC",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png"
+  },
+  "background" : {
+    "scripts" : ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png"
+  },
+  "permissions": [
+    "https://elearn.daffodilvarsity.edu.bd/*"
+  ]
+}
