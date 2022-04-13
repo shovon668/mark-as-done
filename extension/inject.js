@@ -1,24 +1,23 @@
-var x = document.getElementsByClassName("btn btn-outline-secondary");
-var totalll = x.length;
-var var_done = 0;
-for (i = 0; i < totalll; i++) {
-    if (x[i].textContent.indexOf('Mark as done') >= 0) {
-        x[i].click();
-        var_done++;
-    }
+let markButtons = document.getElementsByClassName("btn btn-outline-secondary");
+let markedDone = 0;
+
+for (markButton of markButtons) {
+  if (markButton.textContent.includes("Mark as done")) {
+    markButton.click();
+    markedDone++;
+  }
 }
 
-
 function pop_up() {
-    if (var_done === 0) {
-        alert("There is no unmarked activity.");
-    } else if (var_done === 1) {
-        alert(var_done + " activity marked as done.");
-    } else {
-        alert(var_done + " activities marked as done.");
-    }
+  if (markedDone === 0) {
+    alert("There is no unmarked activity.");
+  } else if (markedDone === 1) {
+    alert(markedDone + " activity marked as done.");
+  } else {
+    alert(markedDone + " activities marked as done.");
+  }
 }
 
 setTimeout(() => {
-    pop_up();
+  pop_up();
 }, 1000);
